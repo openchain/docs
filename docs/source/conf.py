@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'openchain'
+project = u'Openchain'
 copyright = u'2015, Flavien Charlon'
 author = u'Flavien Charlon'
 
@@ -55,7 +55,7 @@ author = u'Flavien Charlon'
 # built documents.
 #
 # The short X.Y version.
-version = '0.2.0'
+version = '0.2'
 # The full version, including alpha/beta/rc tags.
 release = '0.2.0'
 
@@ -252,7 +252,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'openchain', u'openchain Documentation',
+    (master_doc, 'openchain', u'Openchain Documentation',
      [author], 1)
 ]
 
@@ -266,7 +266,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'openchain', u'openchain Documentation',
+  (master_doc, 'openchain', u'Openchain Documentation',
    author, 'openchain', 'One line description of project.',
    'Miscellaneous'),
 ]
