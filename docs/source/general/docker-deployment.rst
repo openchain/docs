@@ -1,15 +1,12 @@
 Openchain Server Docker deployment
 ==================================
 
-The supported deployment method for Openchain server is through Docker.
+Openchain Server is cross platform and can be deployed as a `DNX application <https://dotnet.readthedocs.org/en/latest/dnx/overview.html>`_ on Windows, OS X and Linux. However, to simplify dependency management and homogenize deployment of Openchain, we are shipping it as a Docker image.
 
-Prerequisites
--------------
-
-Openchain Server is cross platform, and will run on Windows, OS X and Linux. These installation instructions should work on any system able to run Docker, however they have only been tested on Ubuntu 14.04.
+This document explain the few steps necessary to have the Openchain server running.
 
 Install Docker
---------------------------
+--------------
 
 First, install Docker if you don't have it:
 
@@ -21,8 +18,8 @@ Then install Docker Compose:
 
 .. code-block:: bash
 
-    sudo apt-get install python-pip
-    sudo pip install -U docker-compose
+    apt-get install python-pip
+    pip install -U docker-compose
     
 Install Openchain Server
 ------------------------
