@@ -1,4 +1,4 @@
-Openchain Documentation
+Openchain |version| Documentation
 =======================
 
 Openchain is an open source distributed ledger technology. It is suited for organizations wishing to issue and manage digital assets in a robust, secure and scalable way.
@@ -12,6 +12,7 @@ General
    general/overview.rst
    general/docker-deployment.rst
    general/configuration.rst
+   general/client.rst
    
 Public API
 ----------
@@ -20,4 +21,5 @@ Public API
    :maxdepth: 2
    
    api/data-structures.rst
+   api/ledger.rst
    api/method-calls.rst
