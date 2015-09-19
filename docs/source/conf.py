@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Openchain'
-copyright = u'2015, Flavien Charlon'
+copyright = u'2015, Coinprism, Inc.'
 author = u'Flavien Charlon'
 
 # The version info for the project you're documenting, acts as replacement for
