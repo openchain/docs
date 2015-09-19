@@ -34,7 +34,13 @@ Clone the openchain/docker repository from GitHub:
     mkdir data
     cp templates/config.json data/config.json
 
-Now, edit the configuration file (``data/config.json``). Edit ``root_url`` to reflect the URL at which the server is hosted. You can use ``http://localhost:8080`` if you are just testing locally.
+Now, edit the configuration file (``data/config.json``):
+
+.. code-block:: bash
+
+    nano data/config.json
+
+Edit ``root_url`` to reflect the URL at which the server is hosted. You can use ``http://localhost:8080`` if you are just testing locally.
 
 .. code-block:: json
    :emphasize-lines: 11, 12
@@ -90,36 +96,36 @@ You can now start the server:
 
 .. code-block:: bash
     
-    docker-compose up
-
-This will run the server in the foreground. You should see log messages confirming the server is running.
-
-.. code-block:: bash
-
-    openchain_1 | info    : [General] Transaction validation mode enabled (Master mode)
-    openchain_1 | info    : [General] Stream subscriber disabled
-    openchain_1 | Application started. Press Ctrl+C to shut down.
-
-You can now stop the execution and run it in the background:
-
-.. code-block:: bash
-    
     docker-compose up -d
+
+To check that the server is running properly, check the docker logs:
+
+.. code-block:: bash
+
+    docker logs openchain-server
+
+You should not see any error:
+
+.. code-block:: bash
+
+    info    : [General] Transaction validation mode enabled (Master mode)
+    info    : [General] Stream subscriber disabled
+    Application started. Press Ctrl+C to shut down.
     
-Now that you have a server running, you can connect to the server with a client.
+Now that you have a server running, you can connect to the server with a :ref:`client <openchain-client>`.
 
-Configure admin keys
---------------------
+Configuring admin keys
+----------------------
 
-Use the client to generate a seed, and derive it into an address. Once you have an address, you can use it as an admin address on your server instance. To do so, update ``data/config.json`` and add it to the `admin_addresses` list:
+Use the :ref:`client <openchain-client>` to generate a seed, and derive it into an address. Once you have an address, you can use it as an admin address on your server instance. To do so, update ``data/config.json`` and add it to the ``admin_addresses`` list:
 
 .. code-block:: json
     
-    // [...]
+    // ...
     "admin_addresses": [
       "<your_address_here>"
     ],
-    // [...]
+    // ...
 
 Controlling the server
 ----------------------

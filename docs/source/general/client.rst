@@ -1,7 +1,9 @@
+.. _openchain-client:
+
 Using the Openchain Wallet
 ==========================
 
-Openchain Server exposes a :doc:`public HTTP API <../api/method-calls>`, which can be called by any program capable of making HTTP calls.
+Openchain Server exposes a :ref:`public HTTP API <http-api>`, which can be called by any program capable of making HTTP calls.
 
 To wrap all those operations in a user-friendly user interface, we also provide a client: the Openchain Wallet.
 
