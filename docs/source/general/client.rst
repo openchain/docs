@@ -12,6 +12,9 @@ The Openchain Wallet is an open source web based interface, available at `wallet
 Connecting to a server
 ----------------------
 
+.. include:: /common/stub.txt
+
 Generating a key
 ----------------
 
+.. include:: /common/stub.txt

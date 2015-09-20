@@ -1,6 +1,6 @@
+.. _http-api:
+
 Method calls
 ============
 
-.. todo::
-
-   This section is not yet available.
+.. include:: /common/stub.txt
