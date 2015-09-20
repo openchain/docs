@@ -8,6 +8,8 @@ This document explain the few steps necessary to have the Openchain server runni
 Install Docker
 --------------
 
+.. note:: This assumes you are running Linux. Use `these instructions <http://docs.docker.com/installation/windows/>`_ if you are running Windows, and `these instructions <http://docs.docker.com/installation/mac/>`_ if you are running OS X.
+
 First, install Docker if you don't have it:
 
 .. code-block:: bash
@@ -20,11 +22,11 @@ Then install Docker Compose:
 
     apt-get install python-pip
     pip install -U docker-compose
-    
+
 Install Openchain Server
 ------------------------
 
-Clone the openchain/docker repository from GitHub:
+Clone the openchain/docker repository from GitHub, and copy the configuration files from the templates provided.
 
 .. code-block:: bash
 
@@ -40,10 +42,10 @@ Now, edit the configuration file (``data/config.json``):
 
     nano data/config.json
 
-Edit ``root_url`` to reflect the URL at which the server is hosted. You can use ``http://localhost:8080`` if you are just testing locally.
+Edit ``root_url`` to reflect the URL at which the server is hosted. You can use ``http://localhost:8080/`` if you are just testing locally.
 
 .. code-block:: json
-   :emphasize-lines: 11, 12
+   :emphasize-lines: 12
    
     {
       "enable_transaction_stream": true,
@@ -56,7 +58,7 @@ Edit ``root_url`` to reflect the URL at which the server is hosted. You can use 
       // Define transaction validation parameters
       "master_mode": {
         // Required: The root URL where this instance is hosted
-        "root_url": "http://localhost:8080",
+        "root_url": "http://localhost:8080/",
         "validator": {
           "type": "PermissionBased",
           "allow_third_party_assets": true,
