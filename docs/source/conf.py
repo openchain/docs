@@ -222,7 +222,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'openchain.tex', u'openchain Documentation',
+  (master_doc, 'openchain.tex', u'Openchain Documentation',
    u'Flavien Charlon', 'manual'),
 ]
 
@@ -267,7 +267,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   (master_doc, 'openchain', u'Openchain Documentation',
-   author, 'openchain', 'One line description of project.',
+   author, 'Openchain', 'One line description of project.',
    'Miscellaneous'),
 ]
 
