@@ -4,10 +4,12 @@ Overview of Openchain
 What is Openchain?
 ------------------
 
-
+.. include:: /common/stub.txt
 
 Frequently Asked Questions
 --------------------------
+
+.. include:: /common/stub.txt
 
 Is Openchain a block chain?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

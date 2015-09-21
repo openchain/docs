@@ -1,7 +1,7 @@
 Ledger structure
 ================
 
-At the core, an Openchain ledger is a key-value store, represented by :ref:`records <data-structures-records>`. At the data store leve, record keys can be any arbitrary byte string, however Openchain Ledger expects a well defined structure for the record keys.
+At the core, an Openchain ledger is a key-value store, represented by :ref:`records <data-structures-records>`. At the data store level, record keys can be any arbitrary byte string, however Openchain Ledger expects a well defined structure for the record keys.
 
 Record keys
 -----------
@@ -61,7 +61,9 @@ There are two valid record types as of this version of Openchain.
 ``ACC`` record
 ~~~~~~~~~~~~~~
 
-The ``ACC`` record is used for representing a balance for a given asset type. The name of the record must be a path that represents the asset type.
+The ``ACC`` record is used for representing a balance for a given asset type. The name of the record must be a path that represents the asset type. The value must be a 64-bits signed integer encoded in big endian. The value represents the current balance for the given account and the given asset type.
+
+.. _data-record:
 
 ``DATA`` record
 ~~~~~~~~~~~~~~~

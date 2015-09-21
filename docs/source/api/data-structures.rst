@@ -61,6 +61,13 @@ A record represents a key-value pair. When used as part of a mutation, it repres
 
 A record that has never been set has a ``value`` and ``version`` both equal to an empty byte string.
 
+.. _check-only-record:
+
+Check-only records
+~~~~~~~~~~~~~~~~~~
+
+.. include:: /common/stub.txt
+
 .. _data-structures-mutation:
 
 Mutation

@@ -122,7 +122,8 @@ Configuring admin keys
 Use the :ref:`client <openchain-client>` to generate a seed, and derive it into an address. Once you have an address, you can use it as an admin address on your server instance. To do so, update ``data/config.json`` and add it to the ``admin_addresses`` list:
 
 .. code-block:: json
-    
+   :emphasize-lines: 3
+   
     // ...
     "admin_addresses": [
       "<your_address_here>"
