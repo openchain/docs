@@ -13,6 +13,7 @@ General
    general/docker-deployment.rst
    general/configuration.rst
    general/transaction-stream.rst
+   general/anchoring.rst
    general/client.rst
    
 Public API
