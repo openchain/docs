@@ -7,7 +7,7 @@ Global rules
 A transaction is made of multiple :ref:`record mutations <data-structures-records>`. ``ACC`` record mutations are subject to a balancing rule. The balancing rule works as follow:
 
 1. For every ``ACC`` record, the delta between the previous balance and the new proposed balance is calculated.
-2. The sum of all detltas **per asset type** is calculated.
+2. The sum of all deltas **per asset type** is calculated.
 3. For every asset type, the sum must be equal to zero.
 
 This ensures every asset creation and destruction is recorded through an account in the system. This means however that at least one account must be able to have a negative balance. Usually, a special account is used to do so, and the ability to create a negative balance on an account requires special permissions.
