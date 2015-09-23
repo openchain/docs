@@ -1,4 +1,96 @@
 Openchain Server Configuration
 ==============================
 
-.. include:: /common/stub.txt
+The configuration of Openchain server is handled through a JSON file named `config.json`. The file is stored under the ``wwwroot/App_Data`` folder.
+
+It is possible to override a configuration value through environment variables. The name of the variable should be the concatenation of all the components of the path, separated by the character ``:``. For example: ``master_mode:validator:allow_third_party_assets``.
+
+config.json
+-----------
+
+Here is the default file:
+
+.. code-block:: json
+   
+    {
+      "enable_transaction_stream": true,
+
+      "storage": {
+        "type": "Sqlite",
+        "path": "ledger.db"
+      },
+
+      // Define transaction validation parameters
+      "master_mode": {
+        // Required: The root URL where this instance is hosted
+        "root_url": "http://localhost:8080/",
+        "validator": {
+          "type": "PermissionBased",
+          "allow_third_party_assets": true,
+          // Base-58 addresses that must have admin rights
+          "admin_addresses": [
+          ],
+          // Special issuer, in the following format:
+          //
+          // {
+          //   "path": "",
+          //   "addresses": [
+          //     ""
+          //   ]
+          // }
+          "issuers": [
+          ],
+          "version_byte": 111
+        }
+      },
+
+      // Uncomment this and comment the "master_mode" section to enable observer mode
+      // "observer_mode": {
+      //   "master_url": ""
+      // },
+
+      "anchoring": {
+        "type": "blockchain",
+        // The key used to publish anchors in the Blockchain
+        "key": "",
+        "bitcoin_api_url": "https://testnet.api.coinprism.com/v1/"
+      }
+    }
+    
+Root section
+------------
+
+* ``enable_transaction_stream``: Boolean indicating whether the transaction stream websocket should be enabled on this instance.
+
+``storage`` section
+-------------------
+
+* ``type``: Value defining which storage provider to use. Currently, the only supported value is ``Sqlite``, and uses a local Sqlite database to store data. 
+
+``master_mode`` and ``observer_mode`` sections
+----------------------------------------------
+
+These two sections are mutually exclusive. Depending whether the instance is setup in master mode or observer mode, either the ``master_mode`` section or ``observer_mode`` section should be present.
+
+In the case of master mode:
+
+* ``master_mode:root_url``: The namespace to be used in transactions. If a client submits a transaction with a mismatching namespace, the transaction will be rejected. Clients use the endpoint their are connected to as the namespace, so for transactions to be properly accepted, this value should match the root URL clients are connecting to.
+* ``master_mode:validator:type``: The type of validation performed by the Openchain instance when transactions are submitted. The only supported value currently is ``PermissionBased``. See :ref:`this section <ledger-rules>` for more details about the implicit rules of the ``PermissionBased`` mode.
+* ``master_mode:validator:allow_third_party_assets``: Boolean indicating whether :ref:`thrid party issuance accounts <third-party-issuance-accounts>` are enabled.
+* ``master_mode:validator:admin_addresses``: List of strings representing all addresses with admin rights.
+* ``master_mode:validator:version_byte``: The version byte to use when representing a public key using its Bitcoin address representation.
+
+In the case of observer mode:
+
+* ``observer_mode:master_url``: The endpoint URL of the parent instance to connect to. Transactions will be replicated using this endpoint.
+
+``anchoring`` section
+---------------------
+
+This section contains configuration settings relative to publishing an anchor to preserve data integrity.
+
+* ``type``: Value defining which anchoring mode to use. Currently, the only supported value is ``blockchain``, and publishes a cumulative hash of the database onto a Bitcoin-compatible blockchain.
+* ``key``: The private key to use (in WIF format) as the signing address for the proof of publication transactions.
+* ``bitcoin_api_url``: The Coinprism API endpoint to use to list unspent outputs and broadcast the signed transaction. Valid values include:
+    - https://api.coinprism.com/v1/ (Bitcoin mainnet)
+    - https://testnet.api.coinprism.com/v1/ (Bitcoin testnet)

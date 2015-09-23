@@ -51,7 +51,7 @@ Edit ``root_url`` to reflect the URL at which the server is hosted. You can use 
       "enable_transaction_stream": true,
 
       "storage": {
-        "type": "SQLite",
+        "type": "Sqlite",
         "path": "ledger.db"
       },
 

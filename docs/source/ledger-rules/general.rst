@@ -1,3 +1,5 @@
+.. _ledger-rules:
+
 Default ledger rules
 ====================
 
