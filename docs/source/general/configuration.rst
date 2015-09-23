@@ -65,7 +65,8 @@ Root section
 ``storage`` section
 -------------------
 
-* ``type``: Value defining which storage provider to use. Currently, the only supported value is ``Sqlite``, and uses a local Sqlite database to store data. 
+* ``type``: Value defining which storage provider to use. Currently, the only supported value is ``Sqlite``, and uses a local Sqlite database to store data.
+* ``path``: The path of the Sqlite database, relative to the ``wwwroot/App_Data`` folder. Absolute paths are also allowed, however, make sure the user under which the DNX process is running has write access to the file.
 
 ``master_mode`` and ``observer_mode`` sections
 ----------------------------------------------
