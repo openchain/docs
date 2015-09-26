@@ -16,7 +16,7 @@ Features of Openchain include:
 6. Transparency and auditability of transactions.
 7. Full control of the participants on the network.
 8. Full control of what constitutes a valid transaction.
-9. Ability to record a cryptographic hash of any Openchain instance onto the Bitcoin blockchain to benefit from the irreversibility of its Proof of Work.
+9. :ref:`Immutability <anchoring>`: Commit an anchor in the Bitcoin Blockchain to benefit from the irreversibility of its Proof of Work.
 
 Frequently Asked Questions
 --------------------------
