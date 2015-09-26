@@ -71,7 +71,7 @@ Root section
 .. _master-observer-configuration:
 
 ``validator_mode`` and ``observer_mode`` sections
-----------------------------------------------
+-------------------------------------------------
 
 These two sections are mutually exclusive. Depending whether the instance is setup in validator mode or observer mode, either the ``validator_mode`` section or ``observer_mode`` section should be present.
 

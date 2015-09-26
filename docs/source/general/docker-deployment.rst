@@ -110,7 +110,10 @@ You should not see any error:
 
 .. code-block:: bash
 
-    info    : [General] Transaction validation mode enabled (Master mode)
+    info    : [General] Starting Openchain v0.2.3
+    info    : [General]
+    info    : [General] Current mode: Validator mode
+    info    : [General] Namespace: http://localhost:8080/
     info    : [General] Stream subscriber disabled
     Application started. Press Ctrl+C to shut down.
     
