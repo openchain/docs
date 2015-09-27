@@ -14,7 +14,7 @@ The full schema is the following:
 
     syntax = "proto3";
 
-    package OpenChain;
+    package Openchain;
 
     message RecordValue {
         bytes data = 1;
