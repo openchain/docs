@@ -15,6 +15,7 @@ General
    general/transaction-stream.rst
    general/anchoring.rst
    general/client.rst
+   general/troubleshooting.rst
    
 Public API
 ----------

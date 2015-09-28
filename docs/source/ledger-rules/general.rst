@@ -17,7 +17,7 @@ This ensures every asset creation and destruction is recorded through an account
 .. tip:: :ref:`Third-party asset issuance accounts <third-party-issuance-accounts>` are allowed to have negative balances.
 
 Aliases (``/aka/<name>/``)
--------------------------
+--------------------------
 
 Openchain has the ability to define aliases for accounts, this simplify the user experience as users no longer have to remember a base-58 random string of characters.
 
@@ -116,7 +116,7 @@ The definition of these fields are the following:
 * ``webpage_url``: A link to user-readable content where users can get more information about this Openchain instance.
     
 Pay-To-Pubkey-Hash accounts (``/p2pkh/<address>/``)
---------------------------------------------------
+---------------------------------------------------
 
 Pay-To-Pubkey-Hash accounts are special accounts with implicit permissions. Signing a transaction spending funds from this account or any sub-account requires the private key corresponding to ``<address>``.
 
@@ -127,7 +127,7 @@ This automatically works with any account of that format, where ``<address>`` is
 .. _third-party-issuance-accounts:
 
 Third-party asset issuance accounts (``/asset/p2pkh/<address>/``)
-----------------------------------------------------------------
+-----------------------------------------------------------------
 
 Third-party asset issuance accounts are special accounts with implicit permissions. The owner of the private key corresponding to <address> can sign transactions spending funds from this account. Funds have to be of the asset type ``/asset/p2pkh/<address>``. Also, this address is authorized to have a negative balance. This means it is possible to use this address as the issuance source of asset type ``/asset/p2pkh/<address>``.
 

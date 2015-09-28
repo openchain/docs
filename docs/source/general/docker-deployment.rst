@@ -30,8 +30,8 @@ Clone the openchain/docker repository from GitHub, and copy the configuration fi
 
 .. code-block:: bash
 
-    git clone https://github.com/openchain/docker.git openchain-docker
-    cd openchain-docker
+    git clone https://github.com/openchain/docker.git openchain
+    cd openchain
     cp templates/server.yml docker-compose.yml
     mkdir data
     cp templates/config.json data/config.json
