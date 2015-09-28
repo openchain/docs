@@ -22,6 +22,8 @@ The first page invites you to connect to an endpoint. Click the link to use the 
 
 Confirm to connect to this endpoint.
 
+.. note:: The Openchain wallet will memorize the endpoint you are connecting to, so you will only have to perform this step once.
+
 Logging in
 ----------
 
@@ -60,6 +62,8 @@ Your account should have been updated with the newly issued asset.
 
 .. image:: /images/wallet-8.png
 
+.. tip:: You can use the "Edit Asset Definition" box in the asset issuance page to define :ref:`metadata <asset-metadata>` about your asset, such as a name and icon.
+
 Send a payment
 --------------
 
@@ -74,3 +78,16 @@ Type a valid destination, such as ``/p2pkh/mfiCwNxuFYMtb5ytCacgzDAineD2GNCnYo/``
 Press "Send" to confirm. If the transaction went through successfully, you should see the transaction confirmation screen.
 
 .. image:: /images/wallet-7.png
+
+Admin tools
+-----------
+
+The wallet also has admin tools built-in.
+
+Ledger tree view
+~~~~~~~~~~~~~~~~
+
+The ledger tree view displays a visual representation of the account hierarchy.
+
+.. image:: /images/wallet-10.png
+

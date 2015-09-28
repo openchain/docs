@@ -62,6 +62,8 @@ Then funds are sent instead to ``/account/beta/``.
 
 .. note:: It is possible and recommended for security reasons to use a :ref:`check-only record <check-only-record>` with the goto record to make sure the value of the goto record is still valid when the transaction is validated.
 
+.. _asset-metadata:
+
 Asset definition record (``asdef``)
 -----------------------------------
 
