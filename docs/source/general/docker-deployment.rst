@@ -100,7 +100,7 @@ You can now start the server:
     
     docker-compose up -d
 
-To check that the server is running properly, check the docker logs:
+This will start the Openchain server in the background. To check that the server is running properly, check the docker logs:
 
 .. code-block:: bash
 
@@ -116,7 +116,9 @@ You should not see any error:
     info    : [General] Namespace: http://localhost:8080/
     info    : [General] Stream subscriber disabled
     Application started. Press Ctrl+C to shut down.
-    
+
+.. tip:: You can also run the Openchain Docker container in the foreground by running ``docker-compose up`` and omitting the ``-d`` switch.
+
 Now that you have a server running, you can connect to the server with a :ref:`client <openchain-client>`.
 
 Configuring admin keys
