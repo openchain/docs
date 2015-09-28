@@ -18,6 +18,14 @@ Features of Openchain include:
 8. Full control of what constitutes a valid transaction.
 9. :ref:`Immutability <anchoring>`: Commit an anchor in the Bitcoin Blockchain to benefit from the irreversibility of its Proof of Work.
 
+Getting started
+---------------
+
+To familiarize yourself with Openchain, you can:
+
+* :ref:`Try the wallet <openchain-client>` against the test endpoint
+* :ref:`Deploy your own Openchain server <docker-deployment>`
+
 Frequently Asked Questions
 --------------------------
 

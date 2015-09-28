@@ -1,3 +1,5 @@
+.. _docker-deployment:
+
 Openchain Server Docker deployment
 ==================================
 
