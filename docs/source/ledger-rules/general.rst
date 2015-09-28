@@ -16,7 +16,7 @@ This ensures every asset creation and destruction is recorded through an account
 
 .. tip:: :ref:`Third-party asset issuance accounts <third-party-issuance-accounts>` are allowed to have negative balances.
 
-Aliases (``/aka/<name>``)
+Aliases (``/aka/<name>/``)
 -------------------------
 
 Openchain has the ability to define aliases for accounts, this simplify the user experience as users no longer have to remember a base-58 random string of characters.
@@ -34,8 +34,8 @@ The client application should convert it internally into::
 
     /aka/bank/
     
-Goto records
-------------
+Goto records (``goto``)
+-----------------------
 
 Goto records are special :ref:`DATA records <data-record>` instructing the client application to use a different account.
 
@@ -62,8 +62,38 @@ Then funds are sent instead to ``/account/beta/``.
 
 .. note:: It is possible and recommended for security reasons to use a :ref:`check-only record <check-only-record>` with the goto record to make sure the value of the goto record is still valid when the transaction is validated.
 
-Ledger info record
-------------------
+Asset definition record (``asdef``)
+-----------------------------------
+
+It is important to be able to associate information with an asset type so that users have the right expectations about it.
+
+The asset definition record can be used to record this information. The asset definition record is a ``DATA`` record with the special name ``asdef``. In addition, it must be placed under the same path as the asset it is attached to.
+
+Example
+~~~~~~~
+
+In order to associate information with the asset represented by path ``/asset/gold/``, the following record must be set::
+
+    /asset/gold/:DATA:asdef
+    
+The value of the record is a UTF-8 string representing a JSON document with the following schema:
+
+.. code-block:: json
+
+    {
+        name: '<string>',
+        name_short: '<string>',
+        icon_url: '<string>'
+    }
+    
+The definition of these fields are the following:
+
+* ``name``: The full name of the asset (e.g.: ``U.S. Dollar``, ``Gold Ounce``).
+* ``name_short``: The short name of the asset. This is used to denominate amounts (e.g.: ``USD``, ``XAU``)
+* ``icon_url``: The URL to an icon representing the asset.
+
+Ledger info record (``info``)
+-----------------------------
 
 Each Openchain instance can store a :ref:`DATA record <data-record>` named ``info`` at the root path (``/``). In other words, the record key should be ``/:DATA:info``.
 
@@ -85,7 +115,7 @@ The definition of these fields are the following:
 * ``tos``: The terms of service of the Openchain instance.
 * ``webpage_url``: A link to user-readable content where users can get more information about this Openchain instance.
     
-Pay-To-Pubkey-Hash accounts (``/p2pkh/<address>``)
+Pay-To-Pubkey-Hash accounts (``/p2pkh/<address>/``)
 --------------------------------------------------
 
 Pay-To-Pubkey-Hash accounts are special accounts with implicit permissions. Signing a transaction spending funds from this account or any sub-account requires the private key corresponding to ``<address>``.
@@ -96,7 +126,7 @@ This automatically works with any account of that format, where ``<address>`` is
 
 .. _third-party-issuance-accounts:
 
-Third-party asset issuance accounts (``/asset/p2pkh/<address>``)
+Third-party asset issuance accounts (``/asset/p2pkh/<address>/``)
 ----------------------------------------------------------------
 
 Third-party asset issuance accounts are special accounts with implicit permissions. The owner of the private key corresponding to <address> can sign transactions spending funds from this account. Funds have to be of the asset type ``/asset/p2pkh/<address>``. Also, this address is authorized to have a negative balance. This means it is possible to use this address as the issuance source of asset type ``/asset/p2pkh/<address>``.
