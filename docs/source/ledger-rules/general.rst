@@ -16,6 +16,8 @@ This ensures every asset creation and destruction is recorded through an account
 
 .. tip:: :ref:`Third-party asset issuance accounts <third-party-issuance-accounts>` are allowed to have negative balances.
 
+.. _aliases:
+
 Aliases (``/aka/<name>/``)
 --------------------------
 

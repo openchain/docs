@@ -87,7 +87,13 @@ The wallet also has admin tools built-in.
 Ledger tree view
 ~~~~~~~~~~~~~~~~
 
-The ledger tree view displays a visual representation of the account hierarchy.
+The ledger tree view displays a visual representation of the :ref:`account hierarchy <account-hierarchy>`. The details of the record selected on the left will be showed on the right hand side.
 
 .. image:: /images/wallet-10.png
 
+Alias editor
+~~~~~~~~~~~~
+
+The alias editor lets you configure :ref:`aliases <aliases>` for specific paths. After an alias has been set, it is possible to send funds to the alias directly using the ``@`` prefix. The wallet will automatically resolve the alias.
+
+.. note:: In the default permission layout, aliases can only be modified by an administrator.
