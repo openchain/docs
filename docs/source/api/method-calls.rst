@@ -46,6 +46,20 @@ The output is a JSON document passed as part of the body of the response.
 
 The format of the JSON document is the following:
 
+.. code-block:: json
+
+    {
+        "key": "<string>",
+        "value": "<string>",
+        "version": "<string>"
+    }
+
+The fields are the following:
+
+* ``key``: The hex-encoded key of the record.
+* ``value``: The hex-encoded value of the record.
+* ``version``: The hex-encoded version of the record.
+
 Transaction stream (``/stream``)
 --------------------------------
 
