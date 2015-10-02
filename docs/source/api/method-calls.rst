@@ -3,17 +3,48 @@
 Method calls
 ============
 
-The Openchain server exposes an HTTP API that can be used to interact with the data.
+The Openchain server exposes an HTTP API that can be used to interact with the data. The URL of an operation is constructed from the base URL of the endpoint, and concatenating it with the relative path of the operation being called.
+
+For example, if the base URL is ``https://www.openchain.org/endpoint/``, for calling the ``/value`` operation (query a record), the full URL should be ``https://www.openchain.org/endpoint/value``.
 
 Submit a transaction (``/submit``)
 ----------------------------------
 
-.. include:: /common/stub.txt
+Submits a transaction for validation.
+
+**Method**: POST
+
+Inputs
+~~~~~~
+
+The input is a JSON document passed as part of the body of the request.
+
+The format of the JSON document is the following:
 
 Query a record (``/value``)
 ---------------------------
 
-.. include:: /common/stub.txt
+Query the value and version of a record given its key.
+
+**Method**: GET
+
+Inputs
+~~~~~~
+
+Inputs are passed through the query string as URL encoded parameters.
+
+==============  ==============
+Parameter name  Description
+==============  ==============
+``key``         The hex-encoded key of the record being queried.
+==============  ==============
+
+Output
+~~~~~~
+
+The output is a JSON document passed as part of the body of the response.
+
+The format of the JSON document is the following:
 
 Transaction stream (``/stream``)
 --------------------------------
