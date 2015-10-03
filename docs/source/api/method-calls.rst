@@ -30,7 +30,7 @@ The format of the JSON document is the following:
                 "pub_key": "<string>",
                 "signature": "<string>"
             }
-      ]
+        ]
     }
 
 Description of the payload:
