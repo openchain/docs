@@ -21,6 +21,36 @@ The input is a JSON document passed as part of the body of the request.
 
 The format of the JSON document is the following:
 
+.. code-block:: json
+
+    {
+        "transaction": "<string>",
+        "signatures": [
+            {
+                "pub_key": "<string>",
+                "signature": "<string>"
+            }
+      ]
+    }
+
+Description of the payload:
+
+* ``transaction``: The hex-encoded mutation. The mutation is serialized using the :ref:`Mutation Protocol Buffers schema <data-structures-mutation>`.
+* ``signatures``: An array of documents with two properties, ``pub_key`` and ``signature``.
+    * ``pub_key``: The hex-encoded public key used to sign.
+    * ``signature``: The hex-encoded signature of the hash of the mutation.
+    
+Signing Process
+^^^^^^^^^^^^^^^
+
+For producing the signatures:
+
+1. Serialize the mutation using the :ref:`Mutation Protocol Buffers schema <data-structures-mutation>`.
+2. Hash the mutation byte string using double SHA256.
+3. Sign it with the relevant private key using Secp256k1. The matching public key must be submitted along with the signature.
+
+.. important:: You must submit the exact byte string as obtained after step 1. If it modified, the hash won't match and the signature will then be invalid.
+
 Query a record (``/value``)
 ---------------------------
 
