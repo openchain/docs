@@ -95,5 +95,6 @@ This section contains configuration settings relative to publishing an anchor to
 * ``type``: Value defining which anchoring mode to use. Currently, the only supported value is ``blockchain``, and publishes a cumulative hash of the database onto a Bitcoin-compatible blockchain.
 * ``key``: The private key to use (in WIF format) as the signing address for the proof of publication transactions.
 * ``bitcoin_api_url``: The Coinprism API endpoint to use to list unspent outputs and broadcast the signed transaction. Valid values include:
+
     - https://api.coinprism.com/v1/ (Bitcoin mainnet)
     - https://testnet.api.coinprism.com/v1/ (Bitcoin testnet)
