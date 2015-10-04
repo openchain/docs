@@ -35,11 +35,12 @@ The format of the JSON document is the following:
 
 Description of the payload:
 
-* ``transaction``: The hex-encoded mutation. The mutation is serialized using the :ref:`Mutation Protocol Buffers schema <data-structures-mutation>`.
-* ``signatures``: An array of documents with two properties, ``pub_key`` and ``signature``.
-    * ``pub_key``: The hex-encoded public key used to sign.
-    * ``signature``: The hex-encoded signature of the hash of the mutation.
-    
+- ``transaction``: The hex-encoded mutation. The mutation is serialized using the :ref:`Mutation Protocol Buffers schema <data-structures-mutation>`.
+- ``signatures``: An array of documents with two properties, ``pub_key`` and ``signature``.
+
+    - ``pub_key``: The hex-encoded public key used to sign.
+    - ``signature``: The hex-encoded signature of the hash of the mutation.
+
 Signing Process
 ^^^^^^^^^^^^^^^
 
@@ -50,6 +51,11 @@ For producing the signatures:
 3. Sign it with the relevant private key using Secp256k1. The matching public key must be submitted along with the signature.
 
 .. important:: You must submit the exact byte string as obtained after step 1. If it modified, the hash won't match and the signature will then be invalid.
+
+Outputs
+~~~~~~~
+
+The output is a JSON document passed as part of the body of the response.
 
 Query a record (``/value``)
 ---------------------------
@@ -63,8 +69,6 @@ Inputs
 
 Inputs are passed through the query string as URL encoded parameters.
 
-==============  ==============
-Parameter name  Description
 ==============  ==============
 ``key``         The hex-encoded key of the record being queried.
 ==============  ==============
