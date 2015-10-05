@@ -65,7 +65,7 @@ The output is a JSON document passed as part of the body of the response.
     
 The ``transaction_hash`` field contains the hex-encoded hash of the full transaction.
 
-Query a record (``/value``)
+Query a record (``/record``)
 ---------------------------
 
 Query the value and version of a record given its key.
