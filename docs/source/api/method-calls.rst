@@ -24,7 +24,7 @@ The format of the JSON document is the following:
 .. code-block:: json
 
     {
-        "transaction": "<string>",
+        "mutation": "<string>",
         "signatures": [
             {
                 "pub_key": "<string>",
@@ -35,7 +35,7 @@ The format of the JSON document is the following:
 
 Description of the payload:
 
-- ``transaction``: The hex-encoded mutation. The mutation is serialized using the :ref:`Mutation Protocol Buffers schema <data-structures-mutation>`.
+- ``mutation``: The hex-encoded mutation. The mutation is serialized using the :ref:`Mutation Protocol Buffers schema <data-structures-mutation>`.
 - ``signatures``: An array of documents with two properties, ``pub_key`` and ``signature``.
 
     - ``pub_key``: The hex-encoded public key used to sign.
@@ -56,6 +56,14 @@ Outputs
 ~~~~~~~
 
 The output is a JSON document passed as part of the body of the response.
+
+.. code-block:: json
+
+    {
+        "transaction_hash": "<string>"
+    }
+    
+The ``transaction_hash`` field contains the hex-encoded hash of the full transaction.
 
 Query a record (``/value``)
 ---------------------------
