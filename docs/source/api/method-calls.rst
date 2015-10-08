@@ -102,6 +102,8 @@ The fields are the following:
 * ``value``: The hex-encoded value of the record.
 * ``version``: The hex-encoded version of the record.
 
+.. _stream-api-endpoint:
+
 Transaction stream (``/stream``)
 --------------------------------
 

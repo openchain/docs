@@ -3,6 +3,8 @@ The transaction stream
 
 Openchain server exposes a websocket endpoint (``/stream``) called the transaction stream. The transaction stream provides a live stream of transactions as they get committed into the ledger.
 
+.. note:: See the :ref:`documentation <stream-api-endpoint>` about the ``/stream`` endpoint for more details.
+
 Validator nodes
 ---------------
 
