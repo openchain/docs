@@ -89,6 +89,8 @@ A mutation is a set of records atomically modifying the state of the data. They 
 
 The version of all updated records after a mutation becomes the hash of that mutation.
 
+.. _data-structures-transaction:
+
 Transaction
 -----------
 

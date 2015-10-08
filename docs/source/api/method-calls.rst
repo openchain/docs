@@ -105,7 +105,23 @@ The fields are the following:
 Transaction stream (``/stream``)
 --------------------------------
 
-.. include:: /common/stub.txt
+This endpoint is a WebSocket endpoint. It can be used to receive all the newly confirmed transaction in real-time.
+
+Inputs
+~~~~~~
+
+Inputs are passed through the query string as URL encoded parameters.
+
+==============  ==============
+``from``        **(optional)** The hex-encoded hash of the last transaction to resume from. If omitted, it will start from the first transaction.
+==============  ==============
+
+Output
+~~~~~~
+
+The output is a WebSocket binary stream.
+
+Each message in the stream is the :ref:`serialized transaction <data-structures-transaction>`.
 
 Query an account (``/query/account``)
 -------------------------------------
