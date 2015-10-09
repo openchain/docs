@@ -107,6 +107,8 @@ The fields are the following:
 Transaction stream (``/stream``)
 --------------------------------
 
+**Method**: GET
+
 This endpoint is a WebSocket endpoint. It can be used to receive all the newly confirmed transaction in real-time.
 
 Inputs
