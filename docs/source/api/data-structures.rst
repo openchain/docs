@@ -45,7 +45,7 @@ The full schema is the following:
 Record
 ------
 
-A record represents a key-value pair. When used as part of a mutation, it represents the intent to modify the value of record in the data store. The key, value and version of a record can be any arbitrary byte string.
+A record object represents the intent to modify the value of a record in the data store. The key, value and version of a record can be any arbitrary byte string.
 
 .. code-block:: protobuf
 
@@ -66,7 +66,9 @@ A record that has never been set has a ``value`` and ``version`` both equal to a
 Check-only records
 ~~~~~~~~~~~~~~~~~~
 
-.. include:: /common/stub.txt
+If a record object has a null ``value`` field, the record object is called a **check-only record**, and does not cause a mutation to the record. It however expresses the requirement that the record (as represented by the ``key`` field) must have the version specified in the ``version`` field of the record object. If the versions dont't match, the full mutation fails to apply.
+
+This provides a way to ensure that a given record has not been modified when the transaction gets validated, even if the record doesn't have to be modified.
 
 .. _data-structures-mutation:
 
