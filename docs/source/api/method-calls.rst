@@ -137,7 +137,7 @@ Query a transaction (``/query/transaction``)
 
 .. include:: /common/stub.txt
 
-Query record in account and subaccounts (``/query/subaccounts``)
-----------------------------------------------------------------
+Query records in an account and its subaccounts (``/query/subaccounts``)
+------------------------------------------------------------------------
 
 .. include:: /common/stub.txt

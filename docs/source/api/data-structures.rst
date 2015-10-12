@@ -66,9 +66,9 @@ A record that has never been set has a ``value`` and ``version`` both equal to a
 Check-only records
 ~~~~~~~~~~~~~~~~~~
 
-If a record object has a null ``value`` field, the record object is called a **check-only record**, and does not cause a mutation to the record. It however expresses the requirement that the record (as represented by the ``key`` field) must have the version specified in the ``version`` field of the record object. If the versions dont't match, the full mutation fails to apply.
+If a record object has a null ``value`` field, the record object is called a **check-only record**, and does not cause a mutation to the record. It however expresses the requirement that the record (as represented by the ``key`` field) must have the version specified in the ``version`` field of the record object. If the versions don't match, the whole mutation fails to apply.
 
-This provides a way to ensure that a given record has not been modified when the transaction gets validated, even if the record doesn't have to be modified.
+This provides a way to ensure that a given record has not been modified between the moment the transaction was created and the moment it gets validated, even if the record doesn't have to be modified.
 
 .. _data-structures-mutation:
 

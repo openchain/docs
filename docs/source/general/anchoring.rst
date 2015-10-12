@@ -11,8 +11,8 @@ With the Bitcoin anchoring mode, one transaction is committed in every Bitcoin b
 
 By doing this, even if Openchain is processing thousands of transactions per second, only one transaction gets sent to the Bitcoin blockchain every 10 minutes. There are multiple benefits to this approach:
 
-- The irreversibility of the Openchain ledger is ensured by Bitcoin miners, therefore Openchain enjoys the same level of irreversibility as Bitcoin itself.
-- At the maximum resolution (one anchor per block), no more than 4,320 transactions per month (in average) will be committed into the blockchain, which will cost about $10 per month (as of October 2015).
+- The irreversibility of the Openchain ledger is ensured by the Bitcoin miners, therefore Openchain enjoys the same level of irreversibility as Bitcoin itself.
+- At the maximum resolution (one anchor per block), no more than 4,320 transactions per month (in average) will be committed into the blockchain, which will cost about $10 per month (as of October 2015), regardless of the number of transactions processed.
 - The resolution can be tuned to further reduce that cost.
 - Openchain can process thousands of transactions per second while remaining very cost-efficient.
 
