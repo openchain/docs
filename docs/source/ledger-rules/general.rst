@@ -23,7 +23,7 @@ Aliases (``/aka/<name>/``)
 
 Openchain has the ability to define aliases for accounts, this simplify the user experience as users no longer have to remember a base-58 random string of characters.
 
-To do so, clients should understand the following syntax as a valid account path: ``@<name>``, and turn in internally into ``/aka/<name>/``.
+To do so, clients should understand the following syntax as a valid account path: ``@<name>``, and turn it internally into ``/aka/<name>/``.
 
 Example
 ~~~~~~~
@@ -35,7 +35,9 @@ If a user wants to send funds to the following account::
 The client application should convert it internally into::
 
     /aka/bank/
-    
+
+.. _goto-records:
+
 Goto records (``goto``)
 -----------------------
 
@@ -43,7 +45,7 @@ Goto records are special :ref:`DATA records <data-record>` instructing the clien
 
 Goto records must have the special name ``goto``.
 
-When a client sends funds to a path, it must first look for a ``DATA`` record named ``goto``. If it exists, the client application must use the path defined as the value of the record instead.
+When a client application sends funds to a path, it must first look for a ``DATA`` record named ``goto``. If it exists, the client application must use the path defined as the value of the record instead.
 
 Example
 ~~~~~~~
@@ -62,7 +64,7 @@ If the record doesn't exist, nothing happens and funds are sent to ``/account/al
 
 Then funds are sent instead to ``/account/beta/``.
 
-.. note:: It is possible and recommended for security reasons to use a :ref:`check-only record <check-only-record>` with the goto record to make sure the value of the goto record is still valid when the transaction is validated.
+.. note:: It is possible and recommended for security reasons that the client application uses a :ref:`check-only record <check-only-record>` with the goto record to make sure the value of the goto record is still valid and hasn't changed when the transaction is validated.
 
 .. _asset-metadata:
 
