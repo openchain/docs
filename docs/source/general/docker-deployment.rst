@@ -63,6 +63,9 @@ Edit ``root_url`` to reflect the URL at which the server is hosted. You can use 
         "root_url": "http://localhost:8080/",
         "validator": {
           "type": "PermissionBased",
+          // Enable /p2pkh/<address>/ accounts
+          "allow_p2pkh_accounts": true,
+          // Enable /asset/p2pkh/<address>/ accounts
           "allow_third_party_assets": true,
           // Base-58 addresses that must have admin rights
           "admin_addresses": [

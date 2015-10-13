@@ -5,7 +5,7 @@ Method calls
 
 The Openchain server exposes an HTTP API that can be used to interact with the data. The URL of an operation is constructed from the base URL of the endpoint, and concatenating it with the relative path of the operation being called.
 
-For example, if the base URL is ``https://www.openchain.org/endpoint/``, for calling the ``/value`` operation (query a record), the full URL should be ``https://www.openchain.org/endpoint/value``.
+For example, if the base URL is ``https://www.openchain.org/endpoint/``, for calling the ``/record`` operation (query a record), the full URL should be ``https://www.openchain.org/endpoint/record``.
 
 Submit a transaction (``/submit``)
 ----------------------------------
