@@ -82,7 +82,8 @@ In the case of validator mode:
 
 * ``validator_mode:root_url``: The namespace to be used in transactions. If a client submits a transaction with a mismatching namespace, the transaction will be rejected. Clients use the endpoint their are connected to as the namespace, so for transactions to be properly accepted, this value should match the root URL clients are connecting to. If this value is incorrect, clients trying to submit a transaction will receive the :ref:`error "The namespace used in the transaction is invalid" <invalid-namespace-error>`.
 * ``validator_mode:validator:type``: The type of validation performed by the Openchain instance when transactions are submitted. The only supported value currently is ``PermissionBased``. See :ref:`this section <ledger-rules>` for more details about the implicit rules of the ``PermissionBased`` mode.
-* ``validator_mode:validator:allow_third_party_assets``: Boolean indicating whether :ref:`thrid party issuance accounts <third-party-issuance-accounts>` are enabled.
+* ``validator_mode:validator:allow_p2pkh_accounts``: Boolean indicating whether :ref:`P2PKH accounts <p2pkh-accounts>` (``/p2pkh/<address>/``) are enabled.
+* ``validator_mode:validator:allow_third_party_assets``: Boolean indicating whether :ref:`thrid party issuance accounts <third-party-issuance-accounts>` (``/asset/p2pkh/<address>/``) are enabled.
 * ``validator_mode:validator:admin_addresses``: List of strings representing all addresses with admin rights.
 * ``validator_mode:validator:version_byte``: The version byte to use when representing a public key using its Bitcoin address representation.
 

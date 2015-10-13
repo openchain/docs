@@ -120,7 +120,9 @@ The definition of these fields are the following:
 * ``validator_url``: The URL of the main validator for this Openchain instance.
 * ``tos``: The terms of service of the Openchain instance.
 * ``webpage_url``: A link to user-readable content where users can get more information about this Openchain instance.
-    
+
+.. _p2pkh-accounts:
+
 Pay-To-Pubkey-Hash accounts (``/p2pkh/<address>/``)
 ---------------------------------------------------
 
