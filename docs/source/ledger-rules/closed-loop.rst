@@ -88,6 +88,8 @@ A funding transaction will simply take the form of a transaction sending X units
 
 The transaction should be signed by an administrator only an administrator has access to ``/treasury/usd/``. The balance on ``/treasury/usd/`` will be negative, and reflect the total amount of tokens that have been issued on the ledger. Again, the administrator is allowed to make the balance negative.
 
+.. _loss-theft:
+
 Addressing loss and theft of the private keys
 ---------------------------------------------
 
@@ -111,4 +113,4 @@ Conclusion
 
 With this setup, users are able to send tokens to each other, however, they are not able to send funds to addresses that are not associated to a registered user.
 
-This represents just one way to implement a closed-loop ledger, but there are many other possible configurations depending on the requirements.
+This represents just one way to implement a closed-loop ledger, and there are many other possible configurations depending on the requirements.

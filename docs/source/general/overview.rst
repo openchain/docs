@@ -22,7 +22,8 @@ Features of Openchain include:
 
 8. Hierarchical account system allowing to set permissions at any level.
 9. Transparency and auditability of transactions.
-10. Ability to have multiple Openchain instances replicating from each other.
+10. :ref:`Handle loss or theft <loss-theft>` of private keys without any loss to the end users.
+11. Ability to have multiple Openchain instances replicating from each other.
 
 Getting started
 ---------------
