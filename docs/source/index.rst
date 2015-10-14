@@ -43,3 +43,4 @@ Ledger rules
    
    ledger-rules/general.rst
    ledger-rules/dynamic-permissions.rst
+   ledger-rules/closed-loop.rst

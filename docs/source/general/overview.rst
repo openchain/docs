@@ -17,7 +17,7 @@ Features of Openchain include:
 7. Multiple levels of control:
 
   - Fully open ledger that can be joined anonymously.
-  - Closed ledger where participants must be approved by the administrator.
+  - :ref:`Closed-loop ledger <closed-loop>` where participants must be approved by the administrator.
   - A mix of the above where approved users enjoy more rights than anonymous users.
 
 8. Hierarchical account system allowing to set permissions at any level.

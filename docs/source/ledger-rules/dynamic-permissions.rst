@@ -1,3 +1,5 @@
+.. _dynamic-permissions:
+
 Dynamic permissions
 ===================
 
