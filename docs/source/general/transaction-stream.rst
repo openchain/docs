@@ -1,3 +1,5 @@
+.. _transaction-stream:
+
 The transaction stream
 ======================
 

@@ -13,17 +13,17 @@ Features of Openchain include:
 3. Extremely high scalability.
 4. Secured through digital signatures.
 5. :ref:`Immutability <anchoring>`: Commit an anchor in the Bitcoin Blockchain to benefit from the irreversibility of its Proof of Work.
-6. Assign aliases to users instead of using base-58 addresses.
+6. :ref:`Assign aliases <aliases>` to users instead of using base-58 addresses.
 7. Multiple levels of control:
 
   - Fully open ledger that can be joined anonymously.
   - :ref:`Closed-loop ledger <closed-loop>` where participants must be approved by the administrator.
   - A mix of the above where approved users enjoy more rights than anonymous users.
 
-8. Hierarchical account system allowing to set permissions at any level.
+8. :ref:`Hierarchical account system <account-hierarchy>` allowing to set permissions at any level.
 9. Transparency and auditability of transactions.
 10. :ref:`Handle loss or theft <loss-theft>` of private keys without any loss to the end users.
-11. Ability to have multiple Openchain instances replicating from each other.
+11. Ability to have multiple Openchain instances :ref:`replicating from each other <transaction-stream>`.
 
 Getting started
 ---------------
