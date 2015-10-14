@@ -9,14 +9,20 @@ Openchain is an open source distributed ledger technology. It is suited for orga
 Features of Openchain include:
 
 1. Instant confirmation of transactions.
-2. No transaction fees to be paid.
+2. No mining fees.
 3. Extremely high scalability.
-4. Digital signatures for non-repudiation.
-5. Ability to synchronize a local replica with another Openchain instance.
-6. Transparency and auditability of transactions.
-7. Full control of the participants on the network.
-8. Full control of what constitutes a valid transaction.
-9. :ref:`Immutability <anchoring>`: Commit an anchor in the Bitcoin Blockchain to benefit from the irreversibility of its Proof of Work.
+4. Secured through digital signatures.
+5. :ref:`Immutability <anchoring>`: Commit an anchor in the Bitcoin Blockchain to benefit from the irreversibility of its Proof of Work.
+6. Assign aliases to users instead of using base-58 addresses.
+7. Multiple levels of control:
+
+  - Fully open ledger that can be joined anonymously.
+  - Closed ledger where participants must be approved by the administrator.
+  - A mix of the above where approved users enjoy more rights than anonymous users.
+
+8. Hierarchical account system allowing to set permissions at any level.
+9. Transparency and auditability of transactions.
+10. Ability to have multiple Openchain instances replicating from each other.
 
 Getting started
 ---------------
@@ -29,12 +35,14 @@ To familiarize yourself with Openchain, you can:
 Frequently Asked Questions
 --------------------------
 
-.. include:: /common/stub.txt
-
 Is Openchain a block chain?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Openchain is not a *block chain* by itself, but a close cousin. A block chain is a data structure where a series of blocks are ordered and linked cryptographically through hashing. Usually, a block is a set of transactions. Openchain links transactions cryptographically through hashing, however it doesn't have a concept of blocks, so Openchain should be considered as a *transaction chain* rather than a *block chain*.
+Openchain falls under the umbrella of Blockchain technology. However, if we take the term "block chain" literally, Openchain is not a "block chain", but a close cousin. A block chain is a data structure that orders blocks of transactions and links them cryptographically through hashing.
+
+Openchain doesn't use the concept of blocks. Transactions are directly chained with one another, and they are no longer grouped in blocks. Having to group transactions in blocks introduces a delay. Even if some systems manage to reduce the block time to just a few seconds, a few seconds is still a long time for latency-sensitive applications, such as trading. In Openchain, transactions are linked to the chain as soon as they are submitted to the network. As a result Openchain is able to offer real-time confirmations.
+
+This means that a more appropriate term for Openchain is a "transaction chain" rather than a "block chain".
 
 Is Openchain a sidechain?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
