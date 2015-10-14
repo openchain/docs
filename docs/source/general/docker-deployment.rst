@@ -140,6 +140,8 @@ Use the :ref:`client <openchain-client>` to generate a seed, and derive it into 
     ],
     // ...
 
+.. tip:: Follow :ref:`these steps <create-info-record>` to configure the ``info`` record on your new instance. The ``info`` record is used by clients connecting to the instance to receive additional information about the instance they are connecting to.
+
 Controlling the server
 ----------------------
 

@@ -98,6 +98,8 @@ The definition of these fields are the following:
 * ``name_short``: The short name of the asset. This is used to denominate amounts (e.g.: ``USD``, ``XAU``)
 * ``icon_url``: The URL to an icon representing the asset.
 
+.. _ledger-info-record:
+
 Ledger info record (``info``)
 -----------------------------
 

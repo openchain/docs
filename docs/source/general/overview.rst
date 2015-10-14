@@ -40,7 +40,7 @@ Is Openchain a block chain?
 
 Openchain falls under the umbrella of Blockchain technology. However, if we take the term "block chain" literally, Openchain is not a "block chain", but a close cousin. A block chain is a data structure that orders blocks of transactions and links them cryptographically through hashing.
 
-Openchain doesn't use the concept of blocks. Transactions are directly chained with one another, and they are no longer grouped in blocks. Having to group transactions in blocks introduces a delay. Even if some systems manage to reduce the block time to just a few seconds, a few seconds is still a long time for latency-sensitive applications, such as trading. In Openchain, transactions are linked to the chain as soon as they are submitted to the network. As a result Openchain is able to offer real-time confirmations.
+Openchain doesn't use the concept of blocks. Transactions are directly chained with one another, and they are no longer grouped in blocks. Having to group transactions in blocks introduces a delay. Even if some systems manage to reduce the block time to just a few seconds, a few seconds is still a long time for latency-sensitive applications, such as trading. In Openchain, transactions are linked to the chain as soon as they are submitted to the network. As a result, Openchain is able to offer real-time confirmations.
 
 This means that a more appropriate term for Openchain is a "transaction chain" rather than a "block chain".
 

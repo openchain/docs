@@ -10,11 +10,19 @@ General
    :maxdepth: 2
 
    general/overview.rst
-   general/docker-deployment.rst
-   general/configuration.rst
    general/transaction-stream.rst
    general/anchoring.rst
+   general/configuration.rst
+   
+Getting Started
+---------------
+
+.. toctree::
+   :maxdepth: 2
+
+   general/docker-deployment.rst
    general/client.rst
+   general/ledger-info.rst
    general/troubleshooting.rst
    
 Public API
