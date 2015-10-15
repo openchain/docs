@@ -70,4 +70,4 @@ The ``ACC`` record is used for representing a balance for a given asset type. Th
 ``DATA`` record
 ~~~~~~~~~~~~~~~
 
-The ``DATA`` record is used to store arbitrary text data. The record name can be any valid UTF-8 string. It can be used to store things such as :ref:`asset metadata <asset-metadata>`, :ref:`symbolic links <goto-records>` within the accounting system, or any other important piece of arbitrary data that needs to be cryptographically secure.
+The ``DATA`` record is used to store arbitrary text data. The record name can be any valid UTF-8 string. It can be used to store things such as :ref:`asset metadata <asset-metadata>`, :ref:`symbolic links <goto-records>` within the accounting system, :ref:`permissions <dynamic-permissions>`, or any other important piece of arbitrary data that needs to be cryptographically secure.
