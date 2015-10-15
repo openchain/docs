@@ -53,6 +53,6 @@ It is possible to use a pegging module that will act as a bridge between a Block
 The pegging module is optional, and an instance doesn't have to be setup as a sidechain if that is not required.
 
 Does Openchain support multi-signature?
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Multi-signature is supported. Permissions are expressed using a list of public keys, and a number of require signatures. If you provide 3 public keys, and require 2 signatures, you have a 2-of-3 multi-signature account. Read about :ref:`dynamic permissions <dynamic-permissions>` to learn more about it.
