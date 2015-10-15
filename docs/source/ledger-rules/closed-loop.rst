@@ -7,6 +7,14 @@ Financial institutions and companies letting their users transfer value often ha
 
 It is possible to use Openchain in this configuration with little effort. This section describes the necessary steps.
 
+The goal of this walkthrough is to configure Openchain so that:
+
+1. Users go through an external registration process where they have their identity verified by the company administrating the ledger, and associate their identity with a public key.
+2. Only public keys matching a registered user can be used to send funds.
+3. Funds can only be sent to registered users.
+
+This way, funds can only circulate amongst "known" users.
+
 Initial configuration
 ---------------------
 
