@@ -39,6 +39,8 @@ Account hierarchy
 
 Openchain uses a hierarchy of accounts, similar to a file system. This adds a lot of interesting management options that systems like Bitcoin don't have.
 
+.. image:: /images/closedloop-2.png
+
 Accounts are identified by a path.
 
 Account paths
