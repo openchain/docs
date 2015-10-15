@@ -50,21 +50,11 @@ The record ``/aka/alice/:DATA:acl`` must be created and set to:
     [
         {
             "subjects": [ { "addresses": [ ], "required": 0 } ],
-            "recursive": true,
-            "record_name": "",
-            "record_name_matching": "Prefix",
-            "permissions": {
-                "account_modify": "Permit",
-            }
+            "permissions": { "account_modify": "Permit" }
         },
         {
             "subjects": [ { "addresses": [ "<alices-address>" ], "required": 1 } ],
-            "recursive": true,
-            "record_name": "",
-            "record_name_matching": "Prefix",
-            "permissions": {
-                "account_spend": "Permit"
-            }
+            "permissions": { "account_spend": "Permit" }
         }
     ]
 

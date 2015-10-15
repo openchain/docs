@@ -48,12 +48,12 @@ The meaning of the fields within a permission object are the following:
   - ``addresses``: An array of strings representing the addresses for which signatures are expected.
   - ``required``: The number of required signatures from the ``addresses`` array. If the ``addresses`` array contains 3 addresses, and ``required`` is set to 2, that means that for the permission to apply, at least 2 signatures from the 3 addresses specified must be present. This is known as a n-of-m multi-signature scheme.
   
-- ``recursive``: A boolean indicating whether the permission applies recursively to the sub accounts.
+- ``recursive``: (Default: true) A boolean indicating whether the permission applies recursively to the sub accounts.
 
   .. note:: With recursion, lower level permissions overrule higher level permissions.
 
-- ``record_name``: The pattern to use for record name matching.
-- ``record_name_matching``: The type of record name matching to use. There are two possible values:
+- ``record_name``: (Default: empty string) The pattern to use for record name matching.
+- ``record_name_matching``: (Default: ``Prefix``) The type of record name matching to use. There are two possible values:
 
   - ``Exact`` means that the record name must be exactly equal to the value of the ``record_name`` field for the permission to apply.
   - ``Prefix`` means that the record name must start with the value of the ``record_name`` field for the permission to apply. Using ``Prefix`` with an empty ``record_name`` means that the permission applies to all records.
