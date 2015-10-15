@@ -48,17 +48,6 @@ The record ``/aka/alice/:DATA:acl`` must be created and set to:
 .. code-block:: json
 
     [
-        // Allow Alice to spend from this account and subaccounts
-        {
-            "subjects": [ { "addresses": [ "<alices-address>" ], "required": 1 } ],
-            "recursive": true,
-            "record_name": "",
-            "record_name_matching": "Prefix",
-            "permissions": {
-                "account_spend": "Permit"
-            }
-        },
-        // Allow anyone to send to this account
         {
             "subjects": [ { "addresses": [ ], "required": 0 } ],
             "recursive": true,
@@ -66,6 +55,15 @@ The record ``/aka/alice/:DATA:acl`` must be created and set to:
             "record_name_matching": "Prefix",
             "permissions": {
                 "account_modify": "Permit",
+            }
+        },
+        {
+            "subjects": [ { "addresses": [ "<alices-address>" ], "required": 1 } ],
+            "recursive": true,
+            "record_name": "",
+            "record_name_matching": "Prefix",
+            "permissions": {
+                "account_spend": "Permit"
             }
         }
     ]
@@ -89,12 +87,18 @@ Now that the user has an account she can use, she will want to fund it. There ar
 
 Assuming the following:
 
-- The asset path for the tokens is ``/assets/usd/`` (this can be arbitrarily chosen).
+- The asset path for the tokens is ``/asset/usd/`` (this can be arbitrarily chosen).
 - The tokens are dynamically issued from the account ``/treasury/usd/``.
 
-A funding transaction will simply take the form of a transaction sending X units of the asset ``/assets/usd/`` from the account ``/treasury/usd/`` to the account ``/aka/alice/``.
+A funding transaction will simply take the form of a transaction sending X units of the asset ``/asset/usd/`` from the account ``/treasury/usd/`` to the account ``/aka/alice/``.
+
+.. image:: /images/closedloop-1.png
 
 The transaction should be signed by an administrator only an administrator has access to ``/treasury/usd/``. The balance on ``/treasury/usd/`` will be negative, and reflect the total amount of tokens that have been issued on the ledger. Again, the administrator is allowed to make the balance negative.
+
+The final ledger tree should look as follow:
+
+.. image:: /images/closedloop-2.png
 
 .. _loss-theft:
 
