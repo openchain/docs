@@ -58,9 +58,9 @@ Edit ``root_url`` to reflect the URL at which the server is hosted. You can use 
       },
 
       // Define transaction validation parameters
-      "master_mode": {
+      "validator_mode": {
         // Required: The root URL where this instance is hosted
-        "root_url": "http://localhost:8080/",
+        "root_url": "",
         "validator": {
           "type": "PermissionBased",
           // Enable /p2pkh/<address>/ accounts
@@ -80,20 +80,22 @@ Edit ``root_url`` to reflect the URL at which the server is hosted. You can use 
           // }
           "issuers": [
           ],
-          "version_byte": 111
+          "version_byte": 76
         }
       },
 
-      // Uncomment this and comment the "master_mode" section to enable observer mode
+      // Uncomment this and comment the "validator_mode" section to enable observer mode
       // "observer_mode": {
-      //   "master_url": ""
+      //   "upstream_url": ""
       // },
 
       "anchoring": {
         "type": "blockchain",
         // The key used to publish anchors in the Blockchain
         "key": "",
-        "bitcoin_api_url": "https://testnet.api.coinprism.com/v1/"
+        "bitcoin_api_url": "https://testnet.api.coinprism.com/v1/",
+        "network_byte": 111,
+        "fees": 1000
       }
     }
     
@@ -115,11 +117,13 @@ You should not see any error:
 
 .. code-block:: bash
 
-    info    : [General] Starting Openchain v0.2.3
+    info    : [General] Starting Openchain v0.4.1 (DNXCore,Version=v5.0)
     info    : [General]
     info    : [General] Current mode: Validator mode
     info    : [General] Namespace: http://localhost:8080/
     info    : [General] Stream subscriber disabled
+    Hosting environment: Production
+    Now listening on: http://0.0.0.0:8080
     Application started. Press Ctrl+C to shut down.
 
 .. tip:: You can also run the Openchain Docker container in the foreground by running ``docker-compose up`` and omitting the ``-d`` switch.
