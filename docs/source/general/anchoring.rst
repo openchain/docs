@@ -26,4 +26,18 @@ Calculating the cumulative hash
 Blockchain anchor format
 ------------------------
 
-.. include:: /common/stub.txt
+The Blockchain anchor is stored in the blockchain using an OP_RETURN operator, followed by a pushdata containing the anchor.
+
+.. code-block:: text
+    
+    OP_RETURN <anchor (42 bytes)>
+
+The anchor is constructed in the following way:
+
+.. code-block:: text
+
+    0x4f 0x43 <transaction count (8 bytes)> <cumulative hash (32 bytes)>
+
+- The first two bytes indicates that the output represents an Openchain anchor.
+- The transaction count is the number of transactions being represented by the cumulative hash. It's an unsigned 64 bits integer, encoded in big endian.
+- The cumulative hash is full cumulative hash (256 bits) as calculated in the previous section.
