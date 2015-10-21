@@ -3,7 +3,7 @@
 Dynamic permissions
 ===================
 
-Openchain supports an implicit permission layout through :ref:`P2PKH accounts <p2pkh-accounts>` (``/p2pkh/<address>/``) and :ref:`thrid party issuance accounts <third-party-issuance-accounts>` (``/asset/p2pkh/<address>/``). It is also possible to dynamically define permissions by sumitting transactions modifying a special record: the ``acl`` record.
+Openchain supports an implicit permission layout through :ref:`P2PKH accounts <p2pkh-accounts>` (``/p2pkh/<address>/``) and :ref:`thrid party issuance accounts <third-party-issuance-accounts>` (``/asset/p2pkh/<address>/``). It is also possible to dynamically define permissions by submitting transactions modifying a special record: the ``acl`` record.
 
 Access Control Lists
 --------------------
