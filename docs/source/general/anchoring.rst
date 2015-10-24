@@ -21,7 +21,18 @@ By doing this, even if Openchain is processing thousands of transactions per sec
 Calculating the cumulative hash
 -------------------------------
 
-.. include:: /common/stub.txt
+The cumulative hash is updated every time a new transaction is added to the ledger.
+
+The cumulative hash at a given height is calculated using the previous cumulative hash and the hash of the new transaction being added to the ledger:
+
+.. code-block:: text
+    
+    cumulative_hash = SHA256( SHA256( previous_cumulative_hash + new_transaction_hash ) )
+    
+- ``previous_cumulative_hash`` (32 bytes) is the cumulative hash at the previous height. At height 0 (when the ledger has no transaction), a 32 bytes buffer filled with zeroes is used.
+- ``new_transaction_hash`` (32 bytes) is the double SHA-256 hash of the :ref:`raw transaction <data-structures-transaction>` being added to the ledger.
+
+Both values are concatenated to form a 64 bytes array, then hashed using double SHA-256.
 
 Blockchain anchor format
 ------------------------
@@ -39,5 +50,5 @@ The anchor is constructed in the following way:
     0x4f 0x43 <transaction count (8 bytes)> <cumulative hash (32 bytes)>
 
 - The first two bytes indicates that the output represents an Openchain anchor.
-- The transaction count is the number of transactions being represented by the cumulative hash. It's an unsigned 64 bits integer, encoded in big endian.
+- The transaction count is the number of transactions being represented by the cumulative hash (the height). It's an unsigned 64 bits integer, encoded in big endian.
 - The cumulative hash is full cumulative hash (256 bits) as calculated in the previous section.
