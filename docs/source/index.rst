@@ -13,6 +13,7 @@ General
    general/transaction-stream.rst
    general/anchoring.rst
    general/configuration.rst
+   general/upgrade.rst
    
 Getting Started
 ---------------
