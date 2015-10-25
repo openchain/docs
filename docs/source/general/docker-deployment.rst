@@ -117,11 +117,11 @@ You should not see any error:
 
 .. code-block:: bash
 
-    info    : [General] Starting Openchain v0.4.1 (DNXCore,Version=v5.0)
-    info    : [General]
-    info    : [General] Current mode: Validator mode
-    info    : [General] Namespace: http://localhost:8080/
-    info    : [General] Stream subscriber disabled
+    info    : [General] [2015-10-25 09:46:02Z] Starting Openchain v0.4.2 (DNXCore,Version=v5.0)
+    info    : [General] [2015-10-25 09:46:02Z]
+    info    : [General] [2015-10-25 09:46:02Z] Current mode: Validator mode
+    info    : [General] [2015-10-25 09:46:02Z] Namespace: http://localhost:8080/
+    info    : [General] [2015-10-25 09:46:02Z] Stream subscriber disabled
     Hosting environment: Production
     Now listening on: http://0.0.0.0:8080
     Application started. Press Ctrl+C to shut down.
