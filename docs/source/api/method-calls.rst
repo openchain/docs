@@ -130,7 +130,43 @@ Each message in the stream is the :ref:`serialized transaction <data-structures-
 Query an account (``/query/account``)
 -------------------------------------
 
-.. include:: /common/stub.txt
+Query all the ACC records at a given path (non-recursively).
+
+**Method**: GET
+
+Inputs
+~~~~~~
+
+Inputs are passed through the query string as URL encoded parameters.
+
+=================  ==============
+``mutation_hash``  The hex-encoded hash of the mutation represented by the transaction.
+=================  ==============
+
+Output
+~~~~~~
+
+The output is a JSON array passed as part of the body of the response.
+
+The format of the JSON array is the following:
+
+.. code-block:: json
+
+    [
+        {
+            "account": "<string>",
+            "asset": "<string>",
+            "balance": "<string>",
+            "version": "<string>"
+        }
+    ]
+
+The fields of each item of the array are the following:
+
+* ``account``: The path of the record.
+* ``value``: The asset ID of the record (the record name).
+* ``balance``: The balance for that asset ID at that path.
+* ``version``: The hex-encoded version of the record.
 
 Query a transaction (``/query/transaction``)
 --------------------------------------------
