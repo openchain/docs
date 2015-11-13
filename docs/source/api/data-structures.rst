@@ -38,7 +38,7 @@ The full schema is the following:
         bytes transaction_metadata = 3;
     }
 
-.. note:: The schema uses the version 3 of Protocol Buffers.
+.. note:: The schema uses version 3 of Protocol Buffers.
 
 .. _data-structures-records:
 
@@ -66,7 +66,7 @@ A record that has never been set has a ``value`` and ``version`` both equal to a
 Check-only records
 ~~~~~~~~~~~~~~~~~~
 
-If a record object has a null ``value`` field, the record object is called a **check-only record**, and does not cause a mutation to the record. It however expresses the requirement that the record (as represented by the ``key`` field) must have the version specified in the ``version`` field of the record object. If the versions don't match, the whole mutation fails to apply.
+If a record object has a null ``value`` field, the record object is called a **check-only record**, and does not cause a mutation to the record. However, it expresses the requirement that the record (as represented by the ``key`` field) must have the version specified in the ``version`` field of the record object. If the versions don't match, the whole mutation fails to apply.
 
 This provides a way to ensure that a given record has not been modified between the moment the transaction was created and the moment it gets validated, even if the record doesn't have to be modified.
 
