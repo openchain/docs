@@ -7,12 +7,12 @@ Openchain Server exposes a :ref:`public HTTP API <http-api>`, which can be calle
 
 To wrap all those operations in a user-friendly user interface, we also provide a client: the Openchain Wallet.
 
-The Openchain Wallet is an open source web based interface, available at `wallet.openchain.org <https://wallet.openchain.org>`_.
+The Openchain Wallet is an open source web-based interface, available at `wallet.openchain.org <https://wallet.openchain.org>`_.
 
 Connecting to a server
 ----------------------
 
-The wallet is a client side application running in the browser, and capable of connecting to any Openchain endpoint. It can connect to multiple endpoints at the same time, and pull information and submit transactions to multiple instances of Openchain, however the first time you use it, you need to connect to at least one endpoint.
+The wallet is a client-side application running in the browser, and capable of connecting to any Openchain endpoint. It can connect to multiple endpoints at the same time, and pull information and submit transactions to multiple instances of Openchain. However, the first time you use it, you need to connect to at least one endpoint.
 
 .. image:: /images/wallet-1.png
 
@@ -48,11 +48,11 @@ To do this, click the "Assets" tab.
 
 .. image:: /images/wallet-5.png
 
-Select the endpoint and the first slot, and click "Confirm".
+Select the endpoint and the first slot, and click "Confirm."
 
 .. image:: /images/wallet-6.png
    
-Click "Issue Asset" and type an amount to issue (10000 for example). Press "Issue".
+Click "Issue Asset" and type an amount to issue (10000 for example). Press "Issue."
 
 You should then see a confirmation of the transaction.
 
