@@ -3,7 +3,7 @@
 Dynamic permissions
 ===================
 
-Openchain supports an implicit permission layout through :ref:`P2PKH accounts <p2pkh-accounts>` (``/p2pkh/<address>/``) and :ref:`thrid party issuance accounts <third-party-issuance-accounts>` (``/asset/p2pkh/<address>/``). It is also possible to dynamically define permissions by submitting transactions modifying a special record: the ``acl`` record.
+Openchain supports an implicit permission layout through :ref:`P2PKH accounts <p2pkh-accounts>` (``/p2pkh/<address>/``) and :ref:`third party issuance accounts <third-party-issuance-accounts>` (``/asset/p2pkh/<address>/``). It is also possible to dynamically define permissions by submitting transactions modifying a special record: the ``acl`` record.
 
 Access Control Lists
 --------------------
@@ -39,7 +39,7 @@ The schema of the JSON file that the record contains is the following:
         }
     ]
 
-The contents is an array containing all the applicable permissions. When the ``acl`` record does not exist, this is equivalent to having an empty array.
+The content is an array containing all the applicable permissions. When the ``acl`` record does not exist, this is equivalent to having an empty array.
 
 The meaning of the fields within a permission object are the following:
 
@@ -48,7 +48,7 @@ The meaning of the fields within a permission object are the following:
   - ``addresses``: An array of strings representing the addresses for which signatures are expected.
   - ``required``: The number of required signatures from the ``addresses`` array. If the ``addresses`` array contains 3 addresses, and ``required`` is set to 2, that means that for the permission to apply, at least 2 signatures from the 3 addresses specified must be present. This is known as a n-of-m multi-signature scheme.
   
-- ``recursive``: (Default: true) A boolean indicating whether the permission applies recursively to the sub accounts.
+- ``recursive``: (Default: true) A boolean indicating whether the permission applies recursively to the sub-accounts.
 
   .. note:: With recursion, lower level permissions overrule higher level permissions.
 
