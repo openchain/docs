@@ -173,6 +173,17 @@ Query a transaction (``/query/transaction``)
 
 .. include:: /common/stub.txt
 
+Query a specific version of a record (``/query/recordversion``)
+---------------------------------------------------------------
+
+.. include:: /common/stub.txt
+
+Query all mutations that have affected a record (``/query/recordmutations``)
+----------------------------------------------------------------------------
+
+.. include:: /common/stub.txt
+
+
 Query records in an account and its subaccounts (``/query/subaccounts``)
 ------------------------------------------------------------------------
 
