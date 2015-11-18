@@ -14,7 +14,9 @@ General
    general/anchoring.rst
    general/configuration.rst
    general/upgrade.rst
-   
+   general/nginx-deployment.rst
+   general/troubleshooting.rst
+
 Getting Started
 ---------------
 
@@ -24,7 +26,6 @@ Getting Started
    general/docker-deployment.rst
    general/client.rst
    general/ledger-info.rst
-   general/troubleshooting.rst
    
 Public API
 ----------
