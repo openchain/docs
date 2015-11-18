@@ -1,6 +1,6 @@
 .. _nginx-deployment:
 
-Deploying Nginx in a production environment
+Deploying Openchain in a production environment
 ===========================================
 
 In production, it is recommended to proxy the Openchain server behind a reverse proxy server such as Nginx. This architecture enables a number of possibilities:

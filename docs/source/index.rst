@@ -3,6 +3,15 @@ Openchain |version| Documentation
 
 Openchain is an open source distributed ledger technology. It is suited for organizations wishing to issue and manage digital assets in a robust, secure and scalable way.
 
+Getting Started
+---------------
+
+.. toctree::
+   :maxdepth: 2
+
+   general/client.rst
+   general/docker-deployment.rst
+
 General
 -------
 
@@ -13,19 +22,10 @@ General
    general/transaction-stream.rst
    general/anchoring.rst
    general/configuration.rst
+   general/ledger-info.rst
    general/upgrade.rst
    general/nginx-deployment.rst
    general/troubleshooting.rst
-
-Getting Started
----------------
-
-.. toctree::
-   :maxdepth: 2
-
-   general/docker-deployment.rst
-   general/client.rst
-   general/ledger-info.rst
    
 Public API
 ----------
