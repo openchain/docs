@@ -21,6 +21,7 @@ Create a DATA record called ``acl`` under the gateway path (e.g. ``/asset/btc/``
             "account_negative": "Permit",
             "account_spend": "Permit",
             "account_modify": "Permit",
+            "account_create": "Permit",
             "data_modify": "Permit"
         }
     }]
@@ -31,11 +32,10 @@ Create a DATA record called ``acl`` in the ``out`` folder under the gateway path
         "subjects": [
             { "addresses": [ ], "required": 0 }
         ],
-        "recursive": false,
         "record_name": "<asset-path>",
         "record_name_matching": "Exact",
         "permissions": {
-            "account_modify": "Permit"
+            "account_create": "Permit"
         }
     }]
 
