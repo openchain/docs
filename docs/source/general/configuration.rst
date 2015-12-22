@@ -16,16 +16,17 @@ Here is the default file:
       "enable_transaction_stream": true,
 
       "storage": {
-        "type": "Sqlite",
+        "provider": "SQLite",
         "path": "ledger.db"
       },
 
       // Define transaction validation parameters
       "validator_mode": {
         // Required: The root URL where this instance is hosted
-        "root_url": "http://localhost:8080/",
+        "root_urls": [
+        ],
         "validator": {
-          "type": "PermissionBased",
+          "provider": "PermissionBased",
           // Enable /p2pkh/<address>/ accounts
           "allow_p2pkh_accounts": true,
           // Enable /asset/p2pkh/<address>/ accounts
@@ -33,17 +34,7 @@ Here is the default file:
           // Base-58 addresses that must have admin rights
           "admin_addresses": [
           ],
-          // Special issuer, in the following format:
-          //
-          // {
-          //   "path": "",
-          //   "addresses": [
-          //     ""
-          //   ]
-          // }
-          "issuers": [
-          ],
-          "version_byte": 111
+          "version_byte": 76
         }
       },
 
@@ -53,10 +44,16 @@ Here is the default file:
       // },
 
       "anchoring": {
-        "type": "blockchain",
+        "provider": "Blockchain",
         // The key used to publish anchors in the Blockchain
         "key": "",
-        "bitcoin_api_url": "https://testnet.api.coinprism.com/v1/"
+        "bitcoin_api_url": "https://testnet.api.coinprism.com/v1/",
+        "network_byte": 111,
+        "fees": 5000,
+        "storage": {
+          "provider": "SQLite",
+          "path": "anchors.db"
+        }
       }
     }
     
@@ -68,8 +65,23 @@ Root section
 ``storage`` section
 -------------------
 
-* ``type``: Value defining which storage engine to use. Currently, the only supported value is ``Sqlite``, and uses a local Sqlite database to store data locally.
+``provider`` defines which storage engine to use. The two built-in values are ``SQLite`` and ``MSSQL``.
+    
+``SQLite`` storage engine
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If the storage provider is set to ``SQLite``, the chain is stored locally using SQLite. In that case, the following setting is used:
+    
 * ``path``: The path of the Sqlite database, relative to the ``wwwroot/App_Data`` folder. Absolute paths are also allowed, however, make sure the user under which the DNX process is running has write access to the file.
+
+``MSSQL`` storage engine
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+If the storage provider is set to ``MSSQL``, the chain is stored using Microsoft SQL Server. In that case, the following setting is used:
+
+* ``connection_string``: The connection string to the SQL Server database.
+
+.. note:: Third party storage engines can be build and used by Openchain. The ``provider`` setting is used to identify at runtime which storage engine should be instantiated.
 
 .. _master-observer-configuration:
 
