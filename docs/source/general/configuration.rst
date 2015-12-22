@@ -92,8 +92,8 @@ These two sections are mutually exclusive. Depending whether the instance is set
 
 In the case of validator mode:
 
-* ``validator_mode:root_url``: The namespace to be used in transactions. If a client submits a transaction with a mismatching namespace, the transaction will be rejected. Clients use the endpoint their are connected to as the namespace, so for transactions to be properly accepted, this value should match the root URL clients are connecting to. If this value is incorrect, clients trying to submit a transaction will receive the :ref:`error "The namespace used in the transaction is invalid" <invalid-namespace-error>`.
-* ``validator_mode:validator:type``: The type of validation performed by the Openchain instance when transactions are submitted. The only supported value currently is ``PermissionBased``. See :ref:`this section <ledger-rules>` for more details about the implicit rules of the ``PermissionBased`` mode.
+* ``validator_mode:root_urls``: The list of valid namespaces to be used in transactions. If a client submits a transaction with a mismatching namespace, the transaction will be rejected. Clients use the endpoint their are connected to as the namespace, so for transactions to be properly accepted, this value should match the root URL clients are connecting to. If this value is incorrect, clients trying to submit a transaction will receive the :ref:`error "The namespace used in the transaction is invalid" <invalid-namespace-error>`.
+* ``validator_mode:validator:provider``: The type of validation performed by the Openchain instance when transactions are submitted. The only supported value currently is ``PermissionBased``. See :ref:`this section <ledger-rules>` for more details about the implicit rules of the ``PermissionBased`` mode.
 * ``validator_mode:validator:allow_p2pkh_accounts``: Boolean indicating whether :ref:`P2PKH accounts <p2pkh-accounts>` (``/p2pkh/<address>/``) are enabled.
 * ``validator_mode:validator:allow_third_party_assets``: Boolean indicating whether :ref:`thrid party issuance accounts <third-party-issuance-accounts>` (``/asset/p2pkh/<address>/``) are enabled.
 * ``validator_mode:validator:admin_addresses``: List of strings representing all addresses with admin rights.
@@ -108,9 +108,13 @@ In the case of observer mode:
 
 This section contains configuration settings relative to publishing an anchor to preserve data integrity.
 
-- ``type``: Value defining which anchoring mode to use. Currently, the only supported value is ``blockchain``, and publishes a cumulative hash of the database onto a Bitcoin-compatible blockchain.
+- ``provider``: Value defining which anchoring mode to use. Currently, the only supported value is ``Blockchain``, and publishes a cumulative hash of the database onto a Bitcoin-compatible blockchain.
 - ``key``: The private key to use (in WIF format) as the signing address for the proof of publication transactions.
 - ``bitcoin_api_url``: The Coinprism API endpoint to use to list unspent outputs and broadcast the signed transaction. Valid values include:
 
     - https://api.coinprism.com/v1/ (Bitcoin mainnet)
     - https://testnet.api.coinprism.com/v1/ (Bitcoin testnet)
+
+- ``network_byte``: The network byte corresponding to the network on which the anchor transaction is published.
+- ``storage:provider``: Value defining how to cache anchors locally. Currently, the only supported value is ``SQLite`` and caches data locally in a SQLite database.
+- ``storage:path``: The path of the local anchor cache database, relative to the ``wwwroot/App_Data`` folder.
