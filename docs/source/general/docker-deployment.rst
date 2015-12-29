@@ -44,56 +44,18 @@ Now, edit the configuration file (``data/config.json``):
 
     nano data/config.json
 
-Add a value to ``root_urls`` to reflect the URL at which the server is hosted. You can use ``http://localhost:8080/`` if you are just testing locally.
+Set the ``instance_seed`` setting to a random (non-empty) string.
 
 .. code-block:: json
-   :emphasize-lines: 13
+   :emphasize-lines: 5
    
-    {
-      "enable_transaction_stream": true,
-
-      "storage": {
-        "provider": "SQLite",
-        "path": "ledger.db"
-      },
-
+    [...]
       // Define transaction validation parameters
       "validator_mode": {
-        // Required: The root URL where this instance is hosted
-        "root_urls": [
-          "http://localhost:8080/"
-        ],
+        // Required: A random string used to generate the chain namespace
+        "instance_seed": "",
         "validator": {
-          "provider": "PermissionBased",
-          // Enable /p2pkh/<address>/ accounts
-          "allow_p2pkh_accounts": true,
-          // Enable /asset/p2pkh/<address>/ accounts
-          "allow_third_party_assets": true,
-          // Base-58 addresses that must have admin rights
-          "admin_addresses": [
-          ],
-          "version_byte": 76
-        }
-      },
-
-      // Uncomment this and comment the "validator_mode" section to enable observer mode
-      // "observer_mode": {
-      //   "upstream_url": ""
-      // },
-
-      "anchoring": {
-        "provider": "Blockchain",
-        // The key used to publish anchors in the Blockchain
-        "key": "",
-        "bitcoin_api_url": "https://testnet.api.coinprism.com/v1/",
-        "network_byte": 111,
-        "fees": 5000,
-        "storage": {
-          "provider": "SQLite",
-          "path": "anchors.db"
-        }
-      }
-    }
+    [...]
     
 .. note:: By default, the Openchain server will run on port 8080. You can edit ``docker-compose.yml`` if you want to run on a non-default port.
 
