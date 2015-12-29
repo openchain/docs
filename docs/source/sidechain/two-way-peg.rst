@@ -28,6 +28,8 @@ Create a DATA record called ``acl`` under the gateway path (e.g. ``/asset/btc/``
 
 Create a DATA record called ``acl`` in the ``out`` folder under the gateway path (e.g. ``/asset/btc/out/``)
 
+.. code-block:: json
+
     [{
         "subjects": [
             { "addresses": [ ], "required": 0 }
