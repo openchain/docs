@@ -140,7 +140,7 @@ Inputs
 Inputs are passed through the query string as URL encoded parameters.
 
 =================  ==============
-``mutation_hash``  The hex-encoded hash of the mutation represented by the transaction.
+``account``        The path to query for.
 =================  ==============
 
 Output
@@ -171,7 +171,53 @@ The fields of each item of the array are the following:
 Query a transaction (``/query/transaction``)
 --------------------------------------------
 
-.. include:: /common/stub.txt
+Retrieve a transaction given the hash of the mutation.
+
+**Method**: GET
+
+Inputs
+~~~~~~
+
+Inputs are passed through the query string as URL encoded parameters.
+
+=================  ==============
+``mutation_hash``  The hex-encoded hash of the mutation represented by the transaction.
+``format``         The output format (``raw`` or ``json``).
+=================  ==============
+
+Output
+~~~~~~
+
+1. ``raw`` output format (default):
+
+.. code-block:: json
+
+    {
+        "raw": "<string>"
+    }
+
+The ``raw`` property contains the serialized transaction.
+    
+2. ``json`` output format
+
+.. code-block:: json
+
+    {
+        "transaction_hash": "<string>",
+        "mutation_hash": "<string>",
+        "mutation": {
+            "namespace": "<string>",
+            "records": [
+                {
+                    "key": "<string>",
+                    "value": "<string>",
+                    "version": "<string>"
+                }
+            ]
+        },
+        "timestamp": "<string>",
+        "transaction_metadata": "<string>"
+    }
 
 Query a specific version of a record (``/query/recordversion``)
 ---------------------------------------------------------------
