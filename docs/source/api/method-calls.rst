@@ -127,6 +127,33 @@ The output is a WebSocket binary stream.
 
 Each message in the stream is the :ref:`serialized transaction <data-structures-transaction>`.
 
+Retrieve the chain info (``/info``)
+-----------------------------------
+
+Get information about the Openchain instance.
+
+**Method**: GET
+
+Inputs
+~~~~~~
+
+This method has no input parameters.
+
+Output
+~~~~~~
+
+The output is a JSON array passed as part of the body of the response.
+
+The format of the JSON array is the following:
+
+.. code-block:: json
+
+    {
+        "namespace": "<string>"
+    }
+
+``namespace`` is the hex representation of the namespace expected in transactions submitted to the Openchain instance.
+
 Query an account (``/query/account``)
 -------------------------------------
 
@@ -374,7 +401,3 @@ The fields are the following:
 * ``value``: The hex-encoded value of the record.
 * ``version``: The hex-encoded version of the record.
 
-Retrieve the chain info (``/info``)
------------------------------------
-
-.. include:: /common/stub.txt
