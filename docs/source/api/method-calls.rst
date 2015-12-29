@@ -188,6 +188,10 @@ Inputs are passed through the query string as URL encoded parameters.
 Output
 ~~~~~~
 
+The output is a JSON document passed as part of the body of the response.
+
+The format of the JSON document depends on the ``format`` argument:
+
 1. ``raw`` output format (default):
 
 .. code-block:: json
@@ -222,13 +226,74 @@ The ``raw`` property contains the serialized transaction.
 Query a specific version of a record (``/query/recordversion``)
 ---------------------------------------------------------------
 
-.. include:: /common/stub.txt
+Retrieve a specific version of a record.
+
+**Method**: GET
+
+Inputs
+~~~~~~
+
+Inputs are passed through the query string as URL encoded parameters.
+
+=================  ==============
+``key``            The hex-encoded record key.
+=================  ==============
+
+Output
+~~~~~~
+
+The output is a JSON document passed as part of the body of the response.
+
+The format of the JSON document is the following:
+
+.. code-block:: json
+
+    {
+        "key": "<string>",
+        "value": "<string>",
+        "version": "<string>"
+    }
+
+The fields are the following:
+
+* ``key``: The hex-encoded key of the record.
+* ``value``: The hex-encoded value of the record.
+* ``version``: The hex-encoded version of the record.
+
+If the record version doesn't exist, HTTP code 404 will be returned by the server.
 
 Query all mutations that have affected a record (``/query/recordmutations``)
 ----------------------------------------------------------------------------
 
-.. include:: /common/stub.txt
+Retrieve all the mutations that have affected a given record.
 
+**Method**: GET
+
+Inputs
+~~~~~~
+
+Inputs are passed through the query string as URL encoded parameters.
+
+=================  ==============
+``key``            The key of the record of which mutations are being retrieved.
+=================  ==============
+
+Output
+~~~~~~
+
+The output is a JSON document passed as part of the body of the response.
+
+The format of the JSON document is the following:
+
+.. code-block:: json
+
+    [
+        {
+            "mutation_hash": "<string>"
+        }
+    ]
+
+The output is a list representing all the mutation hashes of the mutations that have affected the key represented by the ``key`` argument.
 
 Query records in an account and its subaccounts (``/query/subaccounts``)
 ------------------------------------------------------------------------
