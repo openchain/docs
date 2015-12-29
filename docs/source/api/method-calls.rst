@@ -298,4 +298,48 @@ The output is a list representing all the mutation hashes of the mutations that 
 Query records in an account and its subaccounts (``/query/subaccounts``)
 ------------------------------------------------------------------------
 
+Retrieve all the record under a given path (includes sub-paths).
+
+**Method**: GET
+
+Inputs
+~~~~~~
+
+Inputs are passed through the query string as URL encoded parameters.
+
+=================  ==============
+``account``        The path being queried.
+=================  ==============
+
+Output
+~~~~~~
+
+The output is a JSON document passed as part of the body of the response.
+
+The format of the JSON document is the following:
+
+.. code-block:: json
+
+    [
+        {
+            "key": "<string>",
+            "value": "<string>",
+            "version": "<string>"
+        }
+    ]
+
+The fields are the following:
+
+* ``key``: The hex-encoded key of the record.
+* ``value``: The hex-encoded value of the record.
+* ``version``: The hex-encoded version of the record.
+
+Query all records with a given type and name (``/query/recordsbyname``)
+------------------------------------------------------------------------
+
+.. include:: /common/stub.txt
+
+Retrieve the chain info (``/info``)
+------------------------------------------------------------------------
+
 .. include:: /common/stub.txt
