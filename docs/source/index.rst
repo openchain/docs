@@ -26,6 +26,7 @@ General
 .. toctree::
    :maxdepth: 2
 
+   general/direct-deployment.rst
    general/transaction-stream.rst
    general/anchoring.rst
    general/configuration.rst
