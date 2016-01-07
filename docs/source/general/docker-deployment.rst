@@ -35,6 +35,7 @@ Clone the openchain/docker repository from GitHub, and copy the configuration fi
     git clone https://github.com/openchain/docker.git openchain
     cd openchain
     cp templates/docker-compose-direct.yml docker-compose.yml
+    cp templates/project.json openchain/project.json
     mkdir data
     cp templates/config.json data/config.json
 
