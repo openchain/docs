@@ -91,7 +91,7 @@ This permission is required to affect the balance of ``ACC`` records that have n
 .. note::
     A user can only send funds from an account if she has the ``account_negative`` or ``account_spend`` rights plus the ``account_modify`` or ``account_create`` rights. Sending to an account requires ``account_modify`` or ``account_create`` on the destination account.
 
-    A closed loop ledger can be created by denying ``account_modify`` and ``account_create`` by default, and selectively granting these from some accounts. By doing this, only approved accounts can receive funds.
+    A closed loop ledger can be created by denying ``account_modify`` and ``account_create`` by default, and selectively granting these for some accounts. By doing this, only approved accounts can receive funds.
 
 ``data_modify``
 ~~~~~~~~~~~~~~~
