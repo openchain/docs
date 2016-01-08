@@ -34,6 +34,7 @@ The schema of the JSON file that the record contains is the following:
                 "account_negative": "<permission>",
                 "account_spend": "<permission>",
                 "account_modify": "<permission>",
+                "account_create": "<permission>",
                 "data_modify": "<permission>"
             }
         }
@@ -80,9 +81,17 @@ This permission indicates the right to affect the balance of ``ACC`` records, bo
 ``account_modify``
 ~~~~~~~~~~~~~~~~~~
 
-This permission is required to affect the balance of ``ACC`` records. A user can only send funds from an account if she has the ``account_negative`` or ``account_spend`` rights plus the ``account_modify`` rights. Sending to an account requires ``account_modify`` on the destination account.
+This permission is required to affect the balance of ``ACC`` records that have already been modified before (the record version is non-empty).
 
-A closed loop ledger can be created by denying ``account_modify`` by default, and selectively granting it from some accounts. By doing this, only approved accounts can receive funds.
+``account_create``
+~~~~~~~~~~~~~~~~~~
+
+This permission is required to affect the balance of ``ACC`` records that have never been modified before (the record version is empty).
+
+.. note::
+    A user can only send funds from an account if she has the ``account_negative`` or ``account_spend`` rights plus the ``account_modify`` or ``account_create`` rights. Sending to an account requires ``account_modify`` or ``account_create`` on the destination account.
+
+    A closed loop ledger can be created by denying ``account_modify`` and ``account_create`` by default, and selectively granting these from some accounts. By doing this, only approved accounts can receive funds.
 
 ``data_modify``
 ~~~~~~~~~~~~~~~
