@@ -1,14 +1,14 @@
-Openchain Server direct deployment
-==================================
+Running Openchain
+=================
 
-Openchain Server is cross platform and can be deployed as a `DNX application <https://dotnet.github.io/docs/getting-started/installing/index.html>`_ on Windows, OS X and Linux.
+Deploying Openchain server can be done :ref:`through Docker <docker-deployment>`.
 
 This document explains how to deploy Openchain directly on a machine without using docker.
 
 Prerequisites
 -------------
 
-Install the `.NET Command Line Interface <https://github.com/dotnet/cli>`_ . This is cross-platform and runs on Windows, Linux and OS X.
+Install the `.NET Command Line Interface <https://dotnet.github.io/docs/getting-started/installing/index.html>`_ . This is cross-platform and runs on Windows, Linux and OS X.
 
 Download the project files
 --------------------------
