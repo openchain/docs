@@ -17,8 +17,8 @@ Download the ``project.json`` file and ``config.json`` files from GitHub, then r
 
 .. code-block:: bash
 
-    $ wget https://raw.githubusercontent.com/openchain/openchain/v|release|/src/Openchain/project.json
-    $ wget https://raw.githubusercontent.com/openchain/openchain/v|release|/src/Openchain/Webroot/App_Data/config.json -P Webroot/App_Data
+    $ wget https://raw.githubusercontent.com/openchain/openchain/v0.5.0/src/Openchain/project.json
+    $ wget https://raw.githubusercontent.com/openchain/openchain/v0.5.0/src/Openchain/Webroot/App_Data/config.json -P Webroot/App_Data
     $ dnu restore
 
 .. note:: On Windows, simply download the files manually using your browser, then run ``dnu restore``.
