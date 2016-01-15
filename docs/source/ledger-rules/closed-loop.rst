@@ -50,7 +50,7 @@ The record ``/aka/alice/:DATA:acl`` must be created and set to:
     [
         {
             "subjects": [ { "addresses": [ ], "required": 0 } ],
-            "permissions": { "account_modify": "Permit" }
+            "permissions": { "account_modify": "Permit", "account_create": "Permit" }
         },
         {
             "subjects": [ { "addresses": [ "<alices-address>" ], "required": 1 } ],
