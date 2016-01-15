@@ -30,6 +30,7 @@ General
    general/transaction-stream.rst
    general/anchoring.rst
    general/configuration.rst
+   general/modules.rst
    general/ledger-info.rst
    general/upgrade.rst
    general/nginx-deployment.rst
