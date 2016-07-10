@@ -35,7 +35,6 @@ Clone the openchain/docker repository from GitHub, and copy the configuration fi
     git clone https://github.com/openchain/docker.git openchain
     cd openchain
     cp templates/docker-compose-direct.yml docker-compose.yml
-    cp templates/project.json openchain/project.json
     mkdir data
     cp templates/config.json data/config.json
 
@@ -77,14 +76,15 @@ You should not see any error:
 .. code-block:: bash
 
     info: General[0]
-          [2015-12-22 16:02:37Z] Starting Openchain v0.5.0 (DNXCore,Version=v5.0)
+        [2016-07-10 18:20:10Z] Starting Openchain v0.6.2
     info: General[0]
-          [2015-12-22 16:02:37Z]
+        [2016-07-10 18:20:11Z]
     info: General[0]
-          [2015-12-22 16:02:37Z] Stream subscriber disabled
+        [2016-07-10 18:20:13Z] Stream subscriber disabled
     info: General[0]
-          [2015-12-22 16:02:37Z] Anchoring disabled
+        [2016-07-10 18:20:13Z] Anchoring disabled
     Hosting environment: Production
+    Content root path: /openchain
     Now listening on: http://0.0.0.0:8080
     Application started. Press Ctrl+C to shut down.
 
