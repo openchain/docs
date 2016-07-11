@@ -3,7 +3,7 @@
 Openchain Server Configuration
 ==============================
 
-The configuration of Openchain server is handled through a JSON file named `config.json`. The file is stored under the ``wwwroot/App_Data`` folder.
+The configuration of Openchain server is handled through a JSON file named `config.json`. The file is stored under the ``data`` folder.
 
 It is possible to override a configuration value through environment variables. The name of the variable should be the concatenation of all the components of the path, separated by the character ``:``. For example: ``validator_mode:validator:allow_third_party_assets``.
 

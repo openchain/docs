@@ -13,7 +13,7 @@ Install the `.NET Command Line Interface <https://www.microsoft.com/net/core>`_ 
 Download the project files
 --------------------------
 
-Download the ``project.json`` file and ``config.json`` files from GitHub, then restore the NuGet dependencies. On Linux:
+Download the ``project.json``, ``Program.cs`` and ``config.json`` files from GitHub, then restore the NuGet dependencies. On Linux:
 
 .. code-block:: bash
 
@@ -57,7 +57,7 @@ The dependencies section of the ``project.json`` file references the external pr
 
 By defaut, this imports the Sqlite storage engine (``Openchain.Sqlite``), the SQL Server storage engine (``Openchain.SqlServer``), the permission-based validation module (``Openchain.Validation.PermissionBased``), and the Blockchain anchoring module (``Openchain.Anchoring.Blockchain``). Update this list with the modules (and versions) you want to import.
 
-You can then edit the ``Webroot/App_Data/config.json`` file to reference the :ref:`providers you want to use <configuration>`.
+You can then edit the ``data/config.json`` file to reference the :ref:`providers you want to use <configuration>`.
 
 .. tip:: For example, if you want to use the ``SQLite`` provider as a storage engine, you will need to make sure the ``Openchain.Sqlite`` module is listed in the dependencies.
 
