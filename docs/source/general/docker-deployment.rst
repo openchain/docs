@@ -76,7 +76,7 @@ You should not see any error:
 .. code-block:: bash
 
     info: General[0]
-        [2016-07-10 18:20:10Z] Starting Openchain v0.6.2
+        [2016-07-10 18:20:10Z] Starting Openchain v0.7.0
     info: General[0]
         [2016-07-10 18:20:11Z]
     info: General[0]
