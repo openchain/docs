@@ -18,7 +18,7 @@ This way, funds can only circulate amongst "known" users.
 Initial configuration
 ---------------------
 
-The Openchain instance must be configured with both :ref:`P2PKH accounts <p2pkh-accounts>` and :ref:`thrid party issuance accounts <third-party-issuance-accounts>` disabled. The settings ``validator_mode:validator:allow_p2pkh_accounts`` and ``validator_mode:validator:allow_third_party_assets`` must both be set to false to achieve this. See :ref:`this section <master-observer-configuration>` for more details.
+The Openchain instance must be configured with both :ref:`P2PKH accounts <p2pkh-accounts>` and :ref:`third party issuance accounts <third-party-issuance-accounts>` disabled. The settings ``validator_mode:validator:allow_p2pkh_accounts`` and ``validator_mode:validator:allow_third_party_assets`` must both be set to false to achieve this. See :ref:`this section <master-observer-configuration>` for more details.
 
 With this configuration, by default, users have no rights, while administrators have all rights. It is not possible for any normal user to either send or receive tokens.
 
