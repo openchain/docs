@@ -21,7 +21,7 @@ This ensures every asset creation and destruction is recorded through an account
 Aliases (``/aka/<name>/``)
 --------------------------
 
-Openchain has the ability to define aliases for accounts, this simplify the user experience as users no longer have to remember a base-58 random string of characters.
+Openchain has the ability to define aliases for accounts. This simplifies the user experience as users no longer have to remember a base-58 random string of characters.
 
 To do so, clients should understand the following syntax as a valid account path: ``@<name>``, and turn it internally into ``/aka/<name>/``.
 
